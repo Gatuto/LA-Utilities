@@ -1,0 +1,93 @@
+html {
+    background-color: #000016;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-width: 240px;
+    margin: 0;
+}
+
+#auction-calc {
+    margin: 0;
+}
+
+h4 {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.container {
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+    display: flex;
+}
+
+#auction-calc li {
+    padding: 0 8px;
+}
+
+#people-in-raid, #alarm-timer {
+    display: flex;
+    justify-content: center;
+    border: none;
+    width: 240px;
+}
+
+#four-people {
+    background-color: #000016;
+}
+
+#input-price {
+    display: flex;
+    justify-content: center;
+    border: none;
+    width: 240px;
+}
+
+#price-el, #hours-minutes, #alarm-btn{
+    padding: 4px 4px;
+    background-color: #000016;
+    border: solid 1px grey;
+    border-radius: 5px;
+    color: white;
+}
+
+#output-price {
+    border: none;
+}
+
+#output-price p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#alarm-timer li {
+    padding: 4px;
+}
+
+#hours-minutes {
+    width: 80px;
+}
+
+#alarm-timer {
+    flex-direction: column;
+    align-items: center;
+}
+
+#alarm-btn {
+    width: 100px;
+}
+
+#alarm-btn:hover {
+    background-color: antiquewhite;
+    color: #000016;
+}

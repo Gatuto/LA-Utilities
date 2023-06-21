@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-eight">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <section id="auction-calc">
+            <h4>Raid bid calculator</h4>
+            <div class="container">
+                <fieldset id="people-in-raid">
+                    <ul>
+                        <li>
+                            <label for="four-people">
+                                <input
+                                name="people-raid"
+                                type="radio"
+                                value="four-people"
+                                id="four-people"
+                                checked
+                                />
+                                4 People
+                            </label>
+                        </li>
+                        <li>
+                            <label for="eight-people">
+                                <input
+                                name="people-raid"
+                                type="radio"
+                                value="eight-people"
+                                id="eight-people"
+                                />
+                                8 People
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset id="input-price">
+                    <input type="number" id="price-el" placeholder="Enter market price"/>
+                </fieldset>
+            </div>
+            <fieldset id="output-price">
+                <p>Appropriate price: </p>
+                <p id="calculated-price">0</p>
+            </fieldset>
+        </section>
+        <section id="auction-alarm">
+            <h4>Auction House Alarm</h4>
+            <div class="container">
+                <fieldset id="alarm-timer">
+                    <ul>
+                        <li>
+                            <input 
+                            type="number"
+                            id="hours"
+                            min="0"
+                            max="23"
+                            placeholder="Hours left"
+                            />
+                        </li>
+                        <li>
+                            <input 
+                            type="number"
+                            id="minutes"
+                            min="0"
+                            max="59"
+                            placeholder="Minutes left"
+                            />
+                        </li>
+                    </ul>
+                    <button id="alarm-btn">Set Alarm!</button>
+                </fieldset>
+            </div>
+        </section>
+    </body>
+</html>

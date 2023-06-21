@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "LA Utilities",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "assets/icon.png"
+    },
+    "permissions": [
+        "alarms",
+        "notifications"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
