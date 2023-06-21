@@ -1,2 +1,2 @@
 # LA-Utilities
- A Lost Ark extension with many helpful utilities
+ A browser extension with many helpful utilities for Lost Ark
