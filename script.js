@@ -24,7 +24,7 @@ priceInput.addEventListener('input', function(price) {
 });
 
 alarmBtn.addEventListener('click', function() {
-    const hours = parseInt(document.getElementById("hours").value);
+    const hours = parseInt(document.getElementById("hours").value ?? 0);
     const minutes = parseInt(document.getElementById("minutes").value);
     const delayInSeconds = (hours * 3600 + minutes * 60);
 
@@ -33,5 +33,5 @@ alarmBtn.addEventListener('click', function() {
         return;
     }
     chrome.runtime.sendMessage({ delayInSeconds });
-    alert('Alarm set!' + delayInSeconds);
+    const alarmLi = document.createElement("li");
 });

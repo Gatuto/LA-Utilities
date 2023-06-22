@@ -6,13 +6,14 @@
         <script src="script.js" defer></script>
     </head>
     <body>
+        <p class="header">Raid bid calculator</p>
         <section id="auction-calc">
-            <h4>Raid bid calculator</h4>
             <div class="container">
                 <fieldset id="people-in-raid">
-                    <ul>
-                        <li>
-                            <label for="four-people">
+                    <div id="input-price">
+                        <input type="number" id="price-el" placeholder="Market price"/>
+                        <ul>
+                            <li>
                                 <input
                                 name="people-raid"
                                 type="radio"
@@ -20,33 +21,32 @@
                                 id="four-people"
                                 checked
                                 />
-                                4 People
-                            </label>
-                        </li>
-                        <li>
-                            <label for="eight-people">
+                                <label for="four-people">
+                                    4 People
+                                </label>
+                            </li>
+                            <li>
                                 <input
                                 name="people-raid"
                                 type="radio"
                                 value="eight-people"
                                 id="eight-people"
                                 />
+                                <label for="eight-people">
                                 8 People
-                            </label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset id="input-price">
-                    <input type="number" id="price-el" placeholder="Enter market price"/>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="output-price">
+                        <p id="calculated-price">0</p>
+                        <p>APPROPRIATE BID</p>
+                    </div>
                 </fieldset>
             </div>
-            <fieldset id="output-price">
-                <p>Appropriate price: </p>
-                <p id="calculated-price">0</p>
-            </fieldset>
         </section>
+        <p class="header">Auction House Alarm</p>
         <section id="auction-alarm">
-            <h4>Auction House Alarm</h4>
             <div class="container">
                 <fieldset id="alarm-timer">
                     <ul>
@@ -54,22 +54,26 @@
                             <input 
                             type="number"
                             id="hours"
-                            min="0"
+                            class="alarm-inputs"
                             max="23"
-                            placeholder="Hours left"
+                            min="0"
+                            placeholder="Hours"
                             />
                         </li>
                         <li>
                             <input 
                             type="number"
                             id="minutes"
-                            min="0"
+                            class="alarm-inputs"
                             max="59"
-                            placeholder="Minutes left"
+                            min="0"
+                            placeholder="Minutes"
                             />
                         </li>
                     </ul>
-                    <button id="alarm-btn">Set Alarm!</button>
+                    <button id="alarm-btn">SET ALARM</button>
+                    <ul id="alarms-el">
+                    </ul>
                 </fieldset>
             </div>
         </section>

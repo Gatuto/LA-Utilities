@@ -1,81 +1,177 @@
+@font-face {
+    font-family:'Proxima Nova';
+    src: url('assets/Fonts/Proxima-Nova-Regular/Proxima-Nova-Regular.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'Vendome';
+    src: url('assets/Fonts/Vendome-Regular/Vendome-Regular.ttf') format(truetype);
+}
+
+:root {
+    --gold-color: #BFA251;
+    --black-color: #141312;
+    --grey-color: #B5B5B5;
+    --white-color: #FFFFFF;
+    --buttonL-color: #C6A46E;
+    --buttonM-color: #FCF5E2;
+    --buttonR-color: #A98141;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 html {
-    background-color: #000016;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 body {
     min-width: 240px;
+    width: 240px;
     margin: 0;
+}
+
+button {
+    border: solid 1px var(--gold-color);
+    background-color: transparent;
+    color: var(--grey-color);
+    font-weight: 800;
+    padding: 5px 20px;
+    transition: color .35s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(
+        90deg,
+        var(--buttonL-color),
+        var(--buttonM-color),
+        var(--buttonR-color)
+    );
+    color: var(--black-color);
 }
 
 #auction-calc {
     margin: 0;
 }
 
-h4 {
-    padding-left: 20px;
-    margin: 10px 0;
+.header {
+    font-family: 'Vendome', sans-serif;
+    font-size: 22px;
+    padding: 6px 8px;
+    margin: 0;
 }
 
 .container {
-    border-top: solid 1px grey;
-    border-bottom: solid 1px grey;
+    border-top: solid 1px var(--gold-color);
+    border-bottom: solid 1px var(--gold-color);
+    padding: 5px 0;
 }
 
 ul {
     list-style: none;
-    padding: 0;
+    padding: 0 0 6px 0;
     margin: 0;
-    margin-top: 4px;
     display: flex;
+    justify-content: center;
 }
 
 #auction-calc li {
-    padding: 0 8px;
+    padding: 0;
 }
 
-#people-in-raid, #alarm-timer {
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    border: solid 1px var(--gold-color);
+    background-color: transparent;
+    color: var(--grey-color);
+    padding: 4px 10px;
+    transition: color .35s ease;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    background-color: var(--gold-color);
+    color: var(--black-color);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#alarm-timer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border: none;
     width: 240px;
+    padding: 0;
+    margin: 0;
 }
 
-#four-people {
-    background-color: #000016;
+#people-in-raid {
+    padding: 0;
+    border: none;
+    margin: auto;
 }
 
 #input-price {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     border: none;
-    width: 240px;
 }
 
-#price-el, #hours-minutes, #alarm-btn{
+#price-el {
+    width: 154px;
+    font-size: 20px;
+}
+
+#price-el, .alarm-inputs {
     padding: 4px 4px;
-    background-color: #000016;
-    border: solid 1px grey;
-    border-radius: 5px;
-    color: white;
+    background-color: var(--grey-color);
+    border: solid 1px var(--gold-color);
+    color: var(--black-color);
+    text-align: center;
 }
 
 #output-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: none;
 }
 
-#output-price p {
+#output-price p:not(:first-child) {
     margin: 0;
     font-size: 14px;
+    padding-bottom: 6px;
+}
+
+#calculated-price {
+    margin: 0;
+    color: var(--gold-color);
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 28px;
 }
 
 #alarm-timer li {
-    padding: 4px;
+    padding: 0 4px;
 }
 
-#hours-minutes {
-    width: 80px;
+.alarm-inputs {
+    width: 70px;
 }
 
 #alarm-timer {
@@ -83,11 +179,6 @@ ul {
     align-items: center;
 }
 
-#alarm-btn {
-    width: 100px;
-}
-
-#alarm-btn:hover {
-    background-color: antiquewhite;
-    color: #000016;
+#alarms-el {
+    flex-direction: column;
 }
