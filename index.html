@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-eight">
-        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-eight" />
+        <link rel="stylesheet" href="styles.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
@@ -11,30 +11,30 @@
             <div class="container">
                 <fieldset id="people-in-raid">
                     <div id="input-price">
-                        <input type="number" id="price-el" placeholder="Market price"/>
+                        <input
+                            type="number"
+                            id="price-el"
+                            placeholder="Market price"
+                        />
                         <ul>
                             <li>
                                 <input
-                                name="people-raid"
-                                type="radio"
-                                value="four-people"
-                                id="four-people"
-                                checked
+                                    name="people-raid"
+                                    type="radio"
+                                    value="four-people"
+                                    id="four-people"
+                                    checked
                                 />
-                                <label for="four-people">
-                                    4 People
-                                </label>
+                                <label for="four-people"> 4 People </label>
                             </li>
                             <li>
                                 <input
-                                name="people-raid"
-                                type="radio"
-                                value="eight-people"
-                                id="eight-people"
+                                    name="people-raid"
+                                    type="radio"
+                                    value="eight-people"
+                                    id="eight-people"
                                 />
-                                <label for="eight-people">
-                                8 People
-                                </label>
+                                <label for="eight-people"> 8 People </label>
                             </li>
                         </ul>
                     </div>
@@ -51,29 +51,31 @@
                 <fieldset id="alarm-timer">
                     <ul>
                         <li>
-                            <input 
-                            type="number"
-                            id="hours"
-                            class="alarm-inputs"
-                            max="23"
-                            min="0"
-                            placeholder="Hours"
+                            <input
+                                type="number"
+                                id="hours"
+                                class="alarm-inputs"
+                                max="23"
+                                min="0"
+                                placeholder="Hours"
                             />
                         </li>
                         <li>
-                            <input 
-                            type="number"
-                            id="minutes"
-                            class="alarm-inputs"
-                            max="59"
-                            min="0"
-                            placeholder="Minutes"
+                            <input
+                                type="number"
+                                id="minutes"
+                                class="alarm-inputs"
+                                max="59"
+                                min="0"
+                                placeholder="Minutes"
                             />
                         </li>
                     </ul>
-                    <button id="alarm-btn">SET ALARM</button>
-                    <ul id="alarms-el">
-                    </ul>
+                    <div class="alarm-btn-cont">
+                        <button id="alarm-btn">SET ALARM</button>
+                        <button id="alarm-clear">X</button>
+                    </div>
+                    <ul id="alarms-el"></ul>
                 </fieldset>
             </div>
         </section>

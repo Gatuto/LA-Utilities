@@ -1,26 +1,39 @@
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  const delayInSeconds = request.delayInSeconds;
-  const alarmTime = Date.now() + delayInSeconds * 1000;
+let alarmsList = [];
+let alarmsDate = [];
 
-  chrome.alarms.create("myAlarm", {
-    when: alarmTime,
-  });
+chrome.storage.local.get(["alarms"]).then((result) => {
+    const stringArray = result.alarms;
+    if (typeof stringArray === "undefined") {
+        alarmsList = [];
+    } else {
+        alarmsList = JSON.parse(stringArray);
+    }
+});
+
+chrome.storage.local.get(["dateAlarms"]).then((result) => {
+    const stringArray = result.dateAlarms;
+    if (typeof stringArray === "undefined") {
+        alarmsDate = [];
+    } else {
+        alarmsDate = JSON.parse(stringArray);
+    }
 });
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
-  if (alarm.name === "myAlarm") {
     showNotification();
-  }
+    alarmsList.shift();
+    alarmsDate.shift();
+    chrome.storage.local.set({ alarms: JSON.stringify(alarmsList) });
+    chrome.storage.local.set({ dateAlarms: JSON.stringify(alarmsDate) });
 });
 
 function showNotification() {
     const options = {
-        type: 'basic',
-        iconUrl: 'assets/icon.png',
-        title: 'Caution!',
-        message: 'Remember to bid!',
-        silent: false
+        type: "basic",
+        iconUrl: "assets/icon.png",
+        title: "Caution!",
+        message: "Remember to bid!",
+        silent: false,
     };
-    console.log("alarm should've gone off by now");
     chrome.notifications.create(options);
 }

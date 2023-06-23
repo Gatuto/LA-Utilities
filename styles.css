@@ -1,21 +1,23 @@
 @font-face {
-    font-family:'Proxima Nova';
-    src: url('assets/Fonts/Proxima-Nova-Regular/Proxima-Nova-Regular.ttf') format(truetype);
+    font-family: "Proxima Nova";
+    src: url("assets/Fonts/Proxima-Nova-Regular/Proxima-Nova-Regular.ttf")
+        format(truetype);
 }
 
 @font-face {
-    font-family: 'Vendome';
-    src: url('assets/Fonts/Vendome-Regular/Vendome-Regular.ttf') format(truetype);
+    font-family: "Vendome";
+    src: url("assets/Fonts/Vendome-Regular/Vendome-Regular.ttf")
+        format(truetype);
 }
 
 :root {
-    --gold-color: #BFA251;
+    --gold-color: #bfa251;
     --black-color: #141312;
-    --grey-color: #B5B5B5;
-    --white-color: #FFFFFF;
-    --buttonL-color: #C6A46E;
-    --buttonM-color: #FCF5E2;
-    --buttonR-color: #A98141;
+    --grey-color: #b5b5b5;
+    --white-color: #ffffff;
+    --buttonL-color: #c6a46e;
+    --buttonM-color: #fcf5e2;
+    --buttonR-color: #a98141;
 }
 
 * {
@@ -25,7 +27,7 @@
 html {
     background-color: var(--black-color);
     color: var(--white-color);
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: "Proxima Nova", sans-serif;
 }
 
 body {
@@ -40,7 +42,7 @@ button {
     color: var(--grey-color);
     font-weight: 800;
     padding: 5px 20px;
-    transition: color .35s ease;
+    transition: color 0.35s ease;
     cursor: pointer;
 }
 
@@ -59,7 +61,7 @@ button:hover {
 }
 
 .header {
-    font-family: 'Vendome', sans-serif;
+    font-family: "Vendome", sans-serif;
     font-size: 22px;
     padding: 6px 8px;
     margin: 0;
@@ -93,7 +95,7 @@ input[type="radio"] + label {
     background-color: transparent;
     color: var(--grey-color);
     padding: 4px 10px;
-    transition: color .35s ease;
+    transition: color 0.35s ease;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
@@ -137,7 +139,8 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 20px;
 }
 
-#price-el, .alarm-inputs {
+#price-el,
+.alarm-inputs {
     padding: 4px 4px;
     background-color: var(--grey-color);
     border: solid 1px var(--gold-color);
@@ -181,4 +184,18 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #alarms-el {
     flex-direction: column;
+    padding-top: 4px;
+}
+
+#alarms-set {
+    color: var(--gold-color);
+    font-weight: 700;
+}
+
+#alarm-clear {
+    padding: 5px 10px;
+}
+
+.alarm-btn-cont {
+    display: flex;
 }
